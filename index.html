@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>fnaf</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src = "https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+    <script src = "move.js"></script>
+  </head>
+  <body>
+    <!--<a-camera position = "0 -50 5"></a-camera>-->
+    <a-scene background = "color: #000000" inspector-plugin-recast>
+      <a-assets>
+          <a-asset-item 
+          id = "office" 
+          src = "./office/scene.gltf">
+          </a-asset-item>
+
+          <a-asset-item 
+          id = "chica" 
+          src = "./chica/scene.gltf">
+          </a-asset-item>
+
+          <a-asset-item 
+          id = "bonnie" 
+          src = "./bonnie/scene.gltf">
+          </a-asset-item>
+
+          <a-asset-item 
+          id = "fredeez" 
+          src = "./freddy/scene.gltf">
+          </a-asset-item>
+
+      </a-assets> 
+
+      <a-entity id = "cameramain" movement-controls = "speed: 0.5" position = "0 0 0" rotation = "0 0 0" movements>
+      <a-entity id = "camera" camera position = "0 0 0" look-controls = "pointerLockEnabled: false"></a-entity>   </a-entity>
+      <a-entity id = "office2" position = "0 0 0" scale = "5 5 5" gltf-model = "#office">
+      <a-entity id = "chica" position = "0 0 -0.5" scale = "0.2 0.2 0.2" gltf-model = "#chica"></a-entity>
+      <a-entity id = "bonnie" position = "0.5 0 -0.5" scale = "0.3 0.3 0.3" gltf-model = "#bonnie" visibility = "false"></a-entity>
+      <a-entity id = "fredeez" position = "-0.5 0 -0.5" scale = "0.2 0.2 0.2" gltf-model = "#fredeez"></a-entity>
+      <a-entity src = "./assets/CameraButton.png" position = "0 0 2"></a-entity>
+    </a-entity>
+
+    </a-scene>
+  </body>
+</html>
